@@ -1,0 +1,175 @@
+<h1 id="はじめに">1. はじめに</h1>
+<p>このソフトウェアは、日本版簡易 PNP(Personal Needs and
+Preferences)の設定とQRコードの生成・解析を行うVue.js
+3の環境下で使用できるJavaScriptコンポーネントです。</p>
+<h1 id="機能">2. 機能</h1>
+<p>本コンポーネントには、以下の機能があります。</p>
+<ul>
+<li>表示設定</li>
+<li>データ保存</li>
+<li>JSONデータ登録</li>
+<li>QR表示</li>
+<li>QR読み込み</li>
+<li>QRアップロード</li>
+<li>表示サンプル</li>
+<li>About</li>
+<li>Labo</li>
+</ul>
+<p>各機能はそれぞれ独立したコンポーネントとして実装しています。それぞれの機能の詳細は以下の通りです。</p>
+<h2 id="表示設定">2.1 表示設定</h2>
+<p>JPNPで規定されている設定項目をUIで変更する機能です。設定できる項目は以下の通りです。</p>
+<ul>
+<li>背景色</li>
+<li>文字色</li>
+<li>ルビ色</li>
+<li>フォント：教科書体/ゴシック体/明朝体</li>
+<li>フォントサイズ</li>
+<li>文字間</li>
+<li>ルビフォント</li>
+<li>ルビフォントサイズ</li>
+<li>ルビ文字間</li>
+<li>行間</li>
+<li>ワードラップ：あり/なし</li>
+<li>ルビ表示：指定無し/総ルビ/パラルビ/ルビ無し</li>
+<li>分かち書き：指定無し/空白/無し</li>
+<li>表示方向：指定無し/縦組/横組</li>
+<li>表示方向によるUIの変更：あり/なし</li>
+</ul>
+<p>指定項目の値を変更すると、表示設定画面は指定結果を元にした表示方法にダイナミックに更新されます。</p>
+<p><img src="images/2-1-1.png" style="width:80.0%" /></p>
+<p>次の画面は表示方向を縦組に指定して、フォントサイズを20ポイントに変更したものです。</p>
+<p><img src="images/2-1-2.png" style="width:80.0%" /></p>
+<p>次の3つのプリセットボタンが用意されており、プリセットボタンを押すと代表的な色使いの設定に即座に切り替えられます。</p>
+<ul>
+<li>プリセット１</li>
+<li>プリセット２</li>
+<li>プリセット３</li>
+</ul>
+<p>プリセット1は白地に黒の文字、プリセット２は黒地に白の文字、プリセット３は青地に黄色の文字の色使いになっています。
+本システムのでのデフォルトの設定値はプリセット１のものなので、プリセット１のボタンは設定のリセット機能を兼ねています。</p>
+<p>サンプル表示ボタンを押すと、設定値を適用した文書のサンプルが表示されます。</p>
+<h2 id="データ保存">2.2 データ保存</h2>
+<p>設定したJPNPの内容をjsonファイルの形式で保存する機能を提供します。</p>
+<p><img src="images/2-2.png" style="width:80.0%" /></p>
+<p>「保存」ボタンを押すと、ローカルのデバイスにjson形式のJPNP設定ファイル(jpnp.json)を保存できます。</p>
+<h2 id="jsonデータ登録">2.3 JSONデータ登録</h2>
+<p>データ保存でローカルに保存したjson形式のJPNP設定ファイルをブラウザにアップロードして設定値とする機能です。</p>
+<p><img src="images/2-3.png" style="width:80.0%" /></p>
+<h2 id="qr表示">2.4 QR表示</h2>
+<p>設定内容をQRコードで表示します。</p>
+<p><img src="images/2-4.png" style="width:80.0%" /></p>
+<p>この画面はブラウザの印刷機能を使って印刷できます。また、QRコードを右クリックすると表示されるポップアップメニューからQRコードの画像をファイルとして保存できます。</p>
+<h2 id="qr読み込み">2.5 QR読み込み</h2>
+<p><img src="images/2-5.png" style="width:80.0%" /></p>
+<p>デバイスのカメラからJPNPのQRコードを読み取ります。カメラに前述の機能を使って印刷したQRコードをかざして、以前の設定値を復元できます。
+こちらの機能を利用するには、デバイスにカメラが必要です。</p>
+<p>カメラへのアクセスについてはブラウザによるセキュリティ上の縛りが存在し、以下の2通りについてのみ許可されています。</p>
+<ul>
+<li>https://
+のURLで動作していて、正しい電子証明書が設定されているWEBサーバ</li>
+<li>ローカルで動作しているWEBサーバ（http://localhost:ポート番号/）</li>
+</ul>
+<p>http://
+のWEBサーバで提供されているコンテンツからは、カメラへのアクセスが行えません。</p>
+<h2 id="qrアップロード">2.6 QRアップロード</h2>
+<p>QRコードの画像ファイルをアップロードして、以前の設定値を復元する機能です。</p>
+<p><img src="images/2-6.png" style="width:80.0%" /></p>
+<h2 id="表示サンプル">2.7 表示サンプル</h2>
+<p>JPNPの設定値を適用した文書を表示するサンプルです。</p>
+<p><img src="images/2-7.png" style="width:80.0%" /></p>
+<p>表示設定画面のサンプル文書表示は、こちらのコンポーネントを内部に埋め込んで実現しています。</p>
+<h2 id="about">2.8 About</h2>
+<p>本コンポーネントのバージョン番号を表示します。</p>
+<p><img src="images/2-8.png" style="width:80.0%" /></p>
+<h2 id="labo">2.9 Labo</h2>
+<p>開発用の機能です。内部に読み込まれているJPNPのjson情報がリアルタイムに表示されます。</p>
+<p><img src="images/2-9.png" style="width:80.0%" /></p>
+<h1 id="デプロイメント">3 デプロイメント</h1>
+<h2 id="ビルド環境">3.1 ビルド環境</h2>
+<p>node.js v20.12.2とVue 3.0.4の組合せでビルドしています。</p>
+<h2 id="ブラウザサーバ">3.2 ブラウザ、サーバ</h2>
+<p>最新のChrome, FireFox, Safari, Edgeで動作を確認しています。
+WEBサーバにdist以下のビルド済みのツリーを置き、ブラウザからindex.htmlをアクセスすると本コンポーネントを組み込んだサンプルページが起動します。WEBサーバ側にはCGIやバックエンドに関する設定は不要です。</p>
+<h2 id="ローカルでの開発用サーバ">3.3 ローカルでの開発用サーバ</h2>
+<p>Vueには、ローカルマシンで自前で開発用サーバを起動する機能があります。
+node.js
+v20とnpmがインストールされている環境で、まず、次の手順で必要なモジュールのインストールを行います。</p>
+<pre><code>$ rm -rf node_modules
+$ npm install</code></pre>
+<p>上記コマンドはMakefileのcleanとinstallのルールを用いても実行できます。</p>
+<p>これでVue.jsを始めとする動作に必要なJavaScriptのモジュールがnode_modulesのディレクトリ下にインストールされます。
+インストールが完了したらnpm run
+devのコマンドで開発用サーバーを起動できます。</p>
+<pre><code>$ npm run dev
+
+&gt; jpnp@0.0.0 dev
+&gt; vite
+
+The CJS build of Vite&#39;s Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.
+
+  VITE v6.1.0  ready in 124 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+</code></pre>
+<p>上記コマンドはMakefileのrunのルールを用いても実行できます。</p>
+<p>ブラウザから画面に表示されるURLにアクセスすると、本コンポーネントのページが表示されます。</p>
+<h2 id="ビルド">3.4 ビルド</h2>
+<p>開発用サーバではビルドは不要ですが、本番のデプロイメントのためにはビルドが必要です。Vue.jsは大量のコンポーネントで構成されていますが、これを1つのJavaScriptファイルにコンパイルするのがビルドのプロセスです。</p>
+<p>以下のコマンドでビルドを行ってください。</p>
+<pre><code>$ rm -rf dist
+$ npm npm run build</code></pre>
+<p>上記コマンドはMakefileのbuildのルールを用いても実行できます。</p>
+<p>ビルドが完了すると、distディレクトリ下に次のようなコンパイル結果のファイルが生成されます。</p>
+<pre><code>$ ls -lR dist
+total 24
+drwxr-xr-x  4 kudou  staff   128 Feb 12 22:32 assets
+-rw-r--r--  1 kudou  staff  4286 Feb 12 22:32 favicon.ico
+-rw-r--r--  1 kudou  staff   833 Feb 12 22:32 index.html
+
+dist/assets:
+total 928
+-rw-r--r--  1 kudou  staff      46 Feb 12 22:32 index-Bwborzv7.css
+-rw-r--r--  1 kudou  staff  470945 Feb 12 22:32 index-CflQ3Tj3.js</code></pre>
+<p>このツリーをデプロイメント用のサーバにセットすれば、本機能が利用できます。</p>
+<h2 id="dockerを使ったローカルのサーバ">3.5
+Dockerを使ったローカルのサーバ</h2>
+<p>Dockerを使ってnginxのコンテナを動作させWEBサーバを起動する設定ファイルを用意しました。
+以下のコマンドでDockerのコンテナをビルドし、起動できます。</p>
+<pre><code>$ make docker-build
+$ make docker-up</code></pre>
+<p>これで8400番のポートを通じてdistディレクトリ（上記のビルド結果が格納されたツリー）の内容を公開するWEBサーバが立ち上がります。</p>
+<p>Dockerコンテナのサーバの停止は、次のようにします。</p>
+<pre><code>$ make docker-down</code></pre>
+<h2 id="ソースファイル">3.6 ソースファイル</h2>
+<p>今回開発したVue.jsのコンポーネントの主たるソースファイルは次の通りです。</p>
+<ul>
+<li>index.html：初回起動用ページ</li>
+<li>src/App.vue：全体を包括するトップレベルのコンポーネント</li>
+<li>src/index.css：css</li>
+<li>src/main.js：Vue.jsの起動用スクリプト</li>
+<li>src/components/SettingJPNPComponent.vue：表示設定用コンポーネント</li>
+<li>src/components/SampleComponent.vue：サンプル表示用コンポーネント</li>
+<li>src/components/Mbr.vue：＜mbr/＞タグの表示用コンポーネント</li>
+<li>src/components/SaveJPNPComponent.vue：JSON形式のJPNPファイル保存機能コンポーネント</li>
+<li>src/components/UploadJPNPComponent.vue：JSON形式のJPNPファイルアップロード機能コンポーネント</li>
+<li>src/components/ShowJPNPQRComponent.vue：QRコード表示用コンポーネント</li>
+<li>src/components/ReadJPNPQRComponent.vue：JPNP
+QRコード読み込み用コンポーネント</li>
+<li>src/components/UploadJPNPQRComponent.vue：QRコード画像アップロード機能コンポーネント</li>
+<li>src/components/AboutComponent.vue：バージョン表示用コンポーネント</li>
+<li>src/components/LaboComponent.vue：開発用コンポーネント</li>
+<li>src/components/Navbar.vue：ナビゲーションバーのコンポーネント</li>
+<li>src/assets/logo.png：ロゴ</li>
+<li>src/store/index.js：モデル部分のコンポーネント（本システムの核）</li>
+<li>src/router/index.js：ルーター（ナビゲーションメニュー用）</li>
+<li>package.json：依存パッケージ情報</li>
+<li>vite.config.js：viteの設定情報</li>
+<li>Makefile：ビルドルール</li>
+<li>docker-compose.yml：Docker Compose設定ファイル</li>
+<li>nginx/Dockerfile：nginxコンテナビルド用設定ファイル</li>
+<li>nginx/default.conf：nginxサーバ設定ファイル</li>
+<li>.vscode/launch.json：VScode+Chromeでのデバッカー動作に必要な設定ファイル</li>
+<li>doc/readme.md：本ドキュメントソース（マークダウン形式）</li>
+</ul>

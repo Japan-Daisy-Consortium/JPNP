@@ -1,0 +1,252 @@
+2025-02-12  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* doc/Makefile,
+	doc/images/2-1-1.png,
+	doc/images/2-1-2.png,
+	doc/images/2-2.png,
+	doc/images/2-3.png,
+	doc/images/2-4.png,
+	doc/images/2-5.png,
+	doc/images/2-6.png,
+	doc/images/2-7.png,
+	doc/images/2-8.png,
+	doc/images/2-9.png,
+	doc/readme.docx,
+	doc/readme.epub,
+	doc/readme.html,
+	doc/readme.md,
+	doc/readme.pdf,
+	doc/reference.docx
+
+	ドキュメントを追加
+
+	* src/components/LaboComponent.vue
+
+	デバック用の内容を非表示に変更
+
+	* .vscode/launch.json
+
+	VSCode+ChromeによるVue.jsのコードのデバック設定を追加
+
+	* Makefile,
+	docker-compose.yml,
+	nginx/Dockerfile,
+	nginx/default.conf,
+	nginx/log/.placeholder
+
+	Dockerのnginxのコンテナによる簡易サーバの設定を追加
+
+	* src/components/AboutComponent.vue:
+
+	日付を修正
+
+	* package-lock.json,
+	package.json,
+	src/App.vue,
+	vite.config.js
+
+	不要モジュールを削除
+
+	* Makefile,
+	package-lock.json,
+	package.json,
+	src/components/Navbar.vue,
+	src/components/UploadJPNPQRComponent.vue,
+	src/router/index.js,
+	vite.config.js
+
+	QRコード画像のアップロード機能を追加
+
+2025-02-03  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* src/components/AboutComponent.vue
+
+	バージョン表示を修正
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	プリセット設定ボタンを追加
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	縦書き時のtext-orientationの指定を追加
+
+	* src/components/LaboComponent.vue,
+	src/components/Mbr.vue,
+	src/components/Navbar.vue,
+	src/components/SampleComponent.vue,
+	src/components/SettingJPNPComponent.vue,
+	src/router/index.js,
+	src/store/index.js
+
+	表示サンプルを組み込み
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	表示設定に縦書き・横書きのスタイルを適用
+
+	* src/components/SettingJPNPComponent.vue
+	src/store/index.js
+
+	表示画面に設定内容のスタイルを適用
+
+	* src/components/Navbar.vue,
+	src/components/SettingJPNPComponent.vue
+
+	メニューを修正
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	フォントサイズ、字間、行間の設定を追加
+
+	* src/store/index.js
+
+	genericFontFaceの設定処理を追加
+
+2025-02-02  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	プルダウン項目、ラジオボタンの設定項目の追加
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	ワードラップ設定を追加
+
+	* src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	フォント設定を追加
+
+	* Makefile,
+	memo.txt,
+	src/components/LaboComponent.vue,
+	src/components/SettingJPNPComponent.vue,
+	src/store/index.js
+
+	色の設定を追加
+
+2025-02-01  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* src/components/ReadJPNPQRComponent.vue
+
+	QRコードを読み取ったら読取りストリームを非表示にするように変更
+
+	* package-lock.json,
+	package.json,
+	src/components/ReadJPNPQRComponent.vue,
+	src/store/index.js
+
+	QRコード読み込み機能の追加
+
+	* package-lock.json,
+	package.json,
+	src/components/AboutComponent.vue,
+	src/components/LaboComponent.vue,
+	src/components/ShowJPNPQRComponent.vue,
+	src/store/index.js
+
+	QRコード表示機能の追加
+
+	* src/components/Navbar.vue,
+	src/components/SaveJPNPComponent.vue,
+	src/components/UploadJPNPComponent.vue
+
+	画面文言の修正
+
+	* src/components/UploadJPNPComponent.vue
+	src/store/index.js
+
+	JSONファイルのダウンロード時のバグを修正
+
+	* src/components/UploadJPNPComponent.vue
+
+	mapActionsを使ったstoreのaction呼び出しに変更
+
+2025-01-31  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* sample/error_sample1.json,
+	sample/sample1.json,
+	src/components/SaveJPNPComponent.vue,
+	src/components/UploadJPNPComponent.vue,
+	src/store/index.js
+
+	storeのactions呼び出しでjson保存機能を追加
+	JPNPのバリデータを組み込み
+
+2025-01-29  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* src/components/LaboComponent.vue,
+	src/components/Navbar.vue,
+	src/components/SampleComponent.vue,
+	src/components/SaveJPNPComponent.vue,
+	src/router/index.js,
+	src/store/index.js
+
+	JPNPの各属性をVuexのstoreに格納
+
+	* package-lock.json,
+	package.json,
+	src/App.vue,
+	src/components/AboutComponent.vue,
+	src/components/HomeComponent.vue,
+	src/components/Navbar.vue,
+	src/components/SaveJPNPComponent.vue,
+	src/main.js,
+	src/router/index.js
+
+	Vuexの組み込み
+
+2025-01-27  Tomoyuki Kudou  <kudou@cypac.co.jp>
+
+	* src/App.vue
+
+	開発用にJPNPの現在値を表示する機能を追加
+
+	* .gitignore
+
+	ファイルを追加
+
+	* src/components/AboutComponent.vue,
+	src/components/Navbar.vue,
+	src/components/ReadJPNPQRComponent.vue,
+	src/components/SaveJPNPComponent.vue,
+	src/components/SettingJPNPComponent.vue,
+	src/components/ShowJPNPQRComponent.vue,
+	src/components/UploadJPNPComponent.vue,
+	src/router/index.js
+
+	各画面の初期イメージを追加
+
+	* src/components/AboutComponent.vue,
+	src/components/HomeComponent.vue,
+	src/components/Navbar.vue
+
+	Aboutページの記載を追加
+	Homeページの初期的な記載を追加
+
+	* Makefile,
+	index.html,
+	memo.txt,
+	package-lock.json,
+	package.json,
+	public/favicon.ico,
+	src/App.vue,
+	src/assets/logo.png,
+	src/components/AboutComponent.vue,
+	src/components/HelloWorld.vue,
+	src/components/HomeComponent.vue,
+	src/components/MenuComponent.vue,
+	src/components/Navbar.vue,
+	src/index.css,
+	src/main.js,
+	src/router/index.js
+
+	add initial files.
+
